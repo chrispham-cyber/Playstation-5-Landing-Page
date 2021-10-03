@@ -1,0 +1,102 @@
+@media only screen and (max-width: 1150px) {
+  #address{
+    text-align: center;
+    width: 100% !important;
+  }
+
+  #address iframe{
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  #ps5c {
+    margin-top: -70px !important;
+    margin-bottom: 100px !important;
+  }
+
+  #home .row, #ps5c{
+    text-align: center;
+  }
+
+  #home .card .card-img-overlay{
+    position: flex;
+    top: -15%;
+    right: 12%;
+  }
+
+  #home .card .card-img-overlay img{
+    width: 350px !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.dropdown-item:first-child{
+  margin-top: -10px;
+}
+
+.dropdown-item:last-child{
+  margin-bottom: -10px;
+}
+
+.dropdown-item:hover{
+  font-weight: bolder;
+  color: #fff;
+}
+
+#fb:hover{
+  background-color: rgb(36, 111, 209);
+}
+
+#yt:hover{
+  background-color: #ff0000;
+}
+
+#ins:hover{
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+#twi:hover{
+  background-color: #1da1f2;
+}
+
+#toTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 99;
+  color: #000;
+  cursor: pointer;
+}
+
+#toTopBtn:hover {
+  color: rgb(36, 111, 209);
+}
+
+.btn, #follow .img{
+  box-shadow: 3px 4px 5px rgba(150, 150, 150, 0.5);
+}
+
+#follow .img:hover, #game .img:hover{
+  scale: 1.1;
+}
+
+#game img{
+  height: 95%;
+}
+
+footer{
+  background-image: url("img/footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 40% 70%;
+  background-color: black;
+}
+
+footer #footer{
+  background-color: rgba(6, 6, 6, 0.8);
+}
