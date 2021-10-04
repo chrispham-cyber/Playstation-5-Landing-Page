@@ -20,23 +20,24 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="resource/style.css">
-    <script src="main.js"></script>
+    <script src="resource/main.js"></script>
 
     <title>PlayStation®5</title>
   </head>
 
   <body>
     <!-- MENU -->
-    <header class="d-flex sticky-top bg-light border-bottom">
+    <header>
+    <nav class="navbar navbar-expand navbar-primary fixed-top" id="menu">
       <a href="#home" class="navbar-brand ml-5">
         <img
-          class="img img-fluid"
+          
           src="resource/img/ps5-logo.png"
           style="width: 200px"
         />
       </a>
 
-      <ul class="nav nav-pills mt-2 ml-sm-auto pr-5">
+      <ul class="navbar-nav mt-2 ml-sm-auto pr-5">
         <li class="nav-item"><a href="#about" class="nav-link h5 pr-5">About</a></li>
         <li class="nav-item"><a href="#game" class="nav-link h5 pr-5">Gaming</a></li>
         <li class="nav-item"><a href="#device" class="nav-link h5 pr-5">Devices</a></li>   
@@ -53,6 +54,7 @@
           </div>
         </li>
       </ul>
+    </nav>
     </header>
 
     <!-- SLIDE -->
@@ -132,7 +134,7 @@
     <!-- ABOUT -->
     <section>
         <div class="container-fluid pt-5 text-center" id="about">
-            <div data-aos="zoom-in" class="pt-3">
+            <div data-aos="zoom-in" class="pt-4">
               <p
                 class="h6 text-uppercase text-primary mb-n1"
                 style="letter-spacing: 3px; font-weight: 600"
@@ -171,50 +173,76 @@
 
     <!-- GAMING -->
     <section>
-      <div class="container-fluid" id="game" style="background-color: #1f1f1f">
+      <div class="container-fluid pt-4" id="game" style="background-color: #1f1f1f">
       <p class="h1 pt-5 mb-n5 font-weight-normal text-light text-center" data-aos="flip-left">
-        Great games coming soon
+        More Than
+        <span class="counter-count">10000</span>
+        Games
       </p>
 
       <div class="row p-5" data-aos="zoom-in">
-        <div class="col-sm-3 mt-5">
+        <div class="col-sm-3 mt-5"> 
           <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
-            <img class="img img-fluid" src="resource/img/g1.jpg" />
-          </a>
+            <img class="img img-fluid" src="resource/img/g1.jpg" />    
+            <div class="card-img-overlay pt-2 w-25 h-25">
+              <span class="badge badge-danger px-2">New</span>
+            </div>     
+          </a> 
         </div>
         <div class="col-sm-3 mt-5">
           <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
             <img class="img img-fluid" src="resource/img/g2.jpg" />
+            <div class="card-img-overlay pt-2 w-25 h-25">
+              <span class="badge badge-danger px-2">Hot</span>
+            </div>  
           </a>
         </div>
         <div class="col-sm-3 mt-5">
           <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
             <img class="img img-fluid" src="resource/img/g3.jpg" />
+            <div class="card-img-overlay pt-2 w-25 h-25">
+              <span class="badge badge-danger px-2">Free</span>
+            </div>  
           </a>
         </div>
         <div class="col-sm-3 mt-5">
           <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
             <img class="img img-fluid" src="resource/img/g4.jpg" />
+            <div class="card-img-overlay pt-2 w-25 h-25">
+              <span class="badge badge-danger px-2">New</span>
+            </div>  
           </a>
         </div>
         <div class="col-sm-3 mt-5">
           <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
             <img class="img img-fluid" src="resource/img/g5.jpg" />
+            <div class="card-img-overlay pt-2 w-25 h-25">
+              <span class="badge badge-danger px-2">Hot</span>
+            </div>  
           </a>
         </div>
         <div class="col-sm-3 mt-5">
           <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
             <img class="img img-fluid" src="resource/img/g6.jpg" />
+            <div class="card-img-overlay pt-2 w-25 h-25">
+              <span class="badge badge-danger px-2">New</span>
+            </div>  
           </a>
         </div>
         <div class="col-sm-3 mt-5">
           <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
             <img class="img img-fluid" src="resource/img/g7.png" />
+            <div class="card-img-overlay pt-2 w-25 h-25">
+              <span class="badge badge-danger px-2">Trend</span>
+            </div>  
           </a>
         </div>
         <div class="col-sm-3 mt-5">
           <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
             <img class="img img-fluid" src="resource/img/g8.jpg" />
+            <div class="card-img-overlay pt-2 w-25 h-25">
+              <span class="badge badge-danger px-2">Sale 30%</span>
+            </div>  
           </a>
         </div>
       </div>
@@ -391,9 +419,30 @@
   <script>
     AOS.init({duration: 1500});
     var toTop = document.getElementById("toTopBtn");
-  
-    window.onscroll = function () {
+    var menu = document.getElementById("menu");
+    var temp = true;
+    window.onscroll = function () 
+    {
       scrollFunction();
-    };
+     
+    if (window.scrollY > 1000 && temp) 
+    {
+      $('.counter-count').each(function () 
+      {
+          $(this).animate
+          ({
+              Counter: $(this).text()
+          }, 
+          {
+              duration: 3000,
+              easing: 'swing',
+              step: function (now) {
+                  $(this).text(Math.ceil(now));
+              }
+          });
+      }); 
+      temp = false;
+    }
+    };   
   </script>
 </html>

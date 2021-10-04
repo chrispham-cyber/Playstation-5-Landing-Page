@@ -81,12 +81,16 @@ html {
   box-shadow: 3px 4px 5px rgba(150, 150, 150, 0.5);
 }
 
-#follow .img:hover, #game .img:hover{
+#follow img:hover, #game img:hover{
   scale: 1.1;
 }
 
 #game img{
-  height: 95%;
+  height: 90%;
+}
+
+#game .badge{
+  opacity: 0.87;
 }
 
 footer{
