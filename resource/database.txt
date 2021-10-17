@@ -1,1 +1,0 @@
-[{name: thanh,mssv: 1}, {name: thong,mssv: 2}, {name: thanh,mssv: 3}]

@@ -34,6 +34,10 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .dropdown-item:first-child{
   margin-top: -10px;
 }
@@ -98,9 +102,54 @@ footer{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 40% 70%;
-  background-color: black;
 }
 
 footer #footer{
   background-color: rgba(6, 6, 6, 0.8);
+}
+
+#premium{
+  background-image: url("img/premium.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#premium #pre-overlay{
+  background-color: rgba(6, 6, 6, 0.5);
+}
+
+#premium input{
+  background: none; 
+  border: none;
+  border-bottom: 1px #007bffbe solid;
+  margin-top: 20px;
+  border-radius: 0;
+}
+
+#premium .card{
+  border: none;
+}
+
+#accordion .card{
+  background: white;
+  margin-bottom: -5px;
+}
+
+.acc {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.pwd {
+  margin-top: -3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.nav-link:hover{
+  color: red;
+}
+
+.card-img-overlay h1{
+  text-shadow: 7px 5px 7px black;
 }
