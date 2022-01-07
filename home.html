@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, PHNT, 2051012108, OU-OpenUniversity, PHNT-2002">
-  <meta name="description" content="This is a Bootstrap project for studying purpose. It mainly bases on PlayStation 5 Homepage. Hope you guys have a great experience on my website, Love!">
-  <meta name='og:image' content="https://www.gizchina.com/wp-content/uploads/images/2021/02/PS5-ssd.jpg">
-  <meta name="author" content="Pham Hoang Nhat Thanh">
 
+  <!-- Hình thumbnail -->
+  <meta name='og:image' content="https://www.gizchina.com/wp-content/uploads/images/2021/02/PS5-ssd.jpg">
+ 
   <link rel="icon" type="image/png"
     href="https://gmedia.playstation.com/is/image/SIEPDC/ps-logo-favicon?$icon-32-32--t$" sizes="32x32">
 
@@ -26,6 +25,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="resource/style.css">
+
+  <!-- JS -->
   <script src="resource/main.js"></script>
 
   <title>PlayStation®5</title>
@@ -253,6 +254,7 @@
         </p>
       </div>
 
+      <!-- Trang 1 -->
       <div class="row justify-content-center" id="page1">
         <div class="col-sm-5" data-aos="slide-left">
           <img class="img img-fluid h-75 w-75" src="resource/img/d1.jpg"/>
@@ -270,6 +272,7 @@
         </div>
       </div>
 
+      <!-- Trang 2 -->
       <div class="row justify-content-center" id="page2" style="display: none;">
         <div class="col-sm-5" data-aos="slide-left">
           <img class="img img-fluid h-75 w-75" src="resource/img/d3.png"/>
@@ -287,6 +290,7 @@
         </div>
       </div>
 
+      <!-- Chuyển trang -->
       <ul class="pagination justify-content-center">
         <li class="page-item active" id="pg-btn1">
           <button class="page-link" onclick="toPage1()">1</button>
@@ -350,7 +354,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down mr-2" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                   </svg>
-                  Premium
+                  Paid
               </a>
               </div>
               <div id="collapseTwo" class="collapse" data-parent="#accordion">
@@ -370,7 +374,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down mr-2" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                   </svg>
-                  Master
+                  VIP
                 </a>
               </div>
               <div id="collapseThree" class="collapse" data-parent="#accordion">
@@ -422,6 +426,7 @@
 
   <!-- FOOTER -->
   <footer>
+    <!-- Cột 1 -->
     <div class="text-light p-5" id="footer">
       <div class="row mx-auto">
         <div class="col-sm-3 pl-5" id="project">
@@ -435,7 +440,7 @@
         </div>
 
         <div class="col-sm-1"></div>
-
+        <!-- Cột 2 -->
         <div class="col-sm" id="info">
           <p class="h5 pb-2 text-uppercase font-weight-bold">Information</p>
           <p>
@@ -452,6 +457,19 @@
               <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
             </svg>
             2051012108 <br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+            </svg>
+            Nguyễn Ngọc Thiên Ân <br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-award"
+              viewBox="0 0 16 16">
+              <path
+                d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z" />
+              <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
+            </svg>
+            2051012007 <br>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-building"
               viewBox="0 0 16 16">
               <path fill-rule="evenodd"
@@ -469,6 +487,7 @@
           </p>
         </div>
 
+        <!-- Cột 3 -->
         <div class="col-sm" id="address">
           <p class="h5 pb-2 text-uppercase font-weight-bold">
             Address Open University
@@ -481,6 +500,7 @@
     </div>
   </footer>
 
+  <!-- Nút quay về đầu trang -->
   <svg onclick="topFunction()" id="toTopBtn" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
     fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 17 17">
     <path fill-rule="evenodd"
@@ -489,16 +509,18 @@
 </body>
 
 <script>
-  AOS.init({ duration: 1500 });
-  var toTop = document.getElementById("toTopBtn");
+  AOS.init({ duration: 1500 }); // Thời gian chạy animation
+  var toTop = document.getElementById("toTopBtn"); // Quay lại đầu trang
   var menu = document.getElementById("menu");
-  var counted = false;
+  var counted = false; // Đếm số
 
+  // Chuyển page devices
   var pg1 = document.getElementById("page1");
   var pg2 = document.getElementById("page2");
   var btn1 = document.getElementById("pg-btn1");
   var btn2 = document.getElementById("pg-btn2");
 
+  // Kéo đến phần Gaming mới bắt đầu đếm
   window.onscroll = function () {
     scrollFunction();
 
@@ -520,6 +542,7 @@
     }
   };
 
+  // Hiệu ứng cho Follow trên menu
   $(".dropdown-toggle").mouseenter(function()
   {
     $(".dropdown-menu").fadeIn(1000);
@@ -530,6 +553,7 @@
     $(".dropdown-menu").delay(1500).fadeOut(1000);
   })
 
+  // Hiệu ứng cho khung đăng ký cho Premium
   $("#premium .card:first").mouseenter(function()
   {
     $("#premium .card:first").animate({top: '-=15px'});
@@ -540,9 +564,10 @@
     $("#premium .card:first").animate({top: '+=15px'});
   })
 
+  // Hiệu ứng Typing cho Premium
   var typed = new Typed('.typing',
   {
-    strings: ["Trial", "Premium", "Master"],
+    strings: ["Trial", "Paid", "VIP"],
     typeSpeed: 100,
     backSpeed: 100,
     loop: true
