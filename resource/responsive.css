@@ -1,0 +1,49 @@
+@media only screen and (max-width: 1100px) {
+    #address{
+        text-align: center;
+        width: 100% !important;
+      }
+    
+      #address iframe{
+        width: 100% !important;
+      }
+
+    #ps5c {
+      margin-top: -70px !important;
+      margin-bottom: 100px !important;
+    }
+  
+    #home .row, #ps5c{
+      text-align: center;
+    }
+  
+    #home .card .card-img-overlay{
+      position: flex;
+      top: -15%;
+      right: 12%;
+    }
+  
+    #home .card .card-img-overlay img{
+      width: 350px !important;
+    }
+
+    .nav-item, .navbar-brand {
+        display: none;
+    }
+
+    .navbar-responsive {
+        display: block !important;
+        color: #007bffbe;
+        cursor: pointer;
+    }
+
+    .card-img-overlay {
+        padding: auto;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .slide-title {
+        display: none;
+    }
+  }

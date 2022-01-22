@@ -1,42 +1,18 @@
-@media only screen and (max-width: 1150px) {
-  #address{
-    text-align: center;
-    width: 100% !important;
-  }
-
-  #address iframe{
-    width: 100% !important;
-  }
-}
-
-@media only screen and (max-width: 950px) {
-  #ps5c {
-    margin-top: -70px !important;
-    margin-bottom: 100px !important;
-  }
-
-  #home .row, #ps5c{
-    text-align: center;
-  }
-
-  #home .card .card-img-overlay{
-    position: flex;
-    top: -15%;
-    right: 12%;
-  }
-
-  #home .card .card-img-overlay img{
-    width: 350px !important;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
 
+#follow img:hover, #game img:hover {
+  height: 90%;
+}
+
+#game img, #follow img{
+  height: 80%;
+}
+
 ::-webkit-scrollbar {
   display: none;
-}
+};
 
 .dropdown-item:first-child{
   margin-top: -10px;
@@ -85,16 +61,8 @@ html {
   box-shadow: 3px 4px 5px rgba(150, 150, 150, 0.5);
 }
 
-#follow img:hover, #game img:hover{
-  scale: 1.1;
-}
-
-#game img{
-  height: 90%;
-}
-
 #game .badge{
-  opacity: 0.87;
+  opacity: 0.8;
 }
 
 footer{
@@ -152,4 +120,23 @@ footer #footer{
 
 .card-img-overlay h1{
   text-shadow: 7px 5px 7px black;
+}
+
+.navbar-side {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 100%;
+    text-align: center;
+    background-color: white;
+    z-index: 2;
+}
+
+.navbar-body a:hover{
+  color: red;
+  text-decoration: none;
 }
