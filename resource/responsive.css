@@ -59,7 +59,17 @@
     }
 
     #home .card .card-img-overlay img{
-      width: 250px;
+      margin-top: -50px;
+      margin-left: -30px;
+      width: 270px;
+    }
+
+    #game img:hover {
+      height: 110%;
+    }
+
+    #pg-btn1, #pg-btn2 {
+      padding-top: 50px;
     }
   }
 
