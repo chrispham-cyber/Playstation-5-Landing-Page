@@ -63,6 +63,7 @@
         </li>
       </ul>
 
+      <!-- Side Menu -->
       <div class="navbar-side" data-aos="slide-right" data-aos-easing="ease-out">
         <div class="navbar-heading pt-4">
           <a href="#home">
@@ -107,8 +108,8 @@
 
   <!-- SLIDE -->
   <section>
-    <div id="home" class="carousel slide" data-ride="carousel" data-interval="2000">
-      <div class="carousel-inner carousel-fade">
+    <div id="home" class="carousel slide" data-ride="carousel" data-interval="1500">
+      <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row mb-n5">
             <div class="card bg-dark text-white" data-aos="zoom-in">
@@ -382,12 +383,13 @@
           <div class="card" style="width: 350px; border: none;">
             <img src="resource/img/form.jpg" class="card-img-top">
             <div class="card-body mb-3">
-              <form>             
-                <input type="text" class="form-control" placeholder="User Name"> 
-                <input type="email" class="form-control" placeholder="Email"> 
-                <input type="password" class="form-control" placeholder="Password">    
+              <form class="was-validated">             
+                  <input type="text" class="form-control" placeholder="User Name" required> 
+                  <input type="email" class="form-control" placeholder="Email" required> 
+                  <input type="password" class="form-control" placeholder="Password" required> 
+                  <div class="invalid-feedback" >Please fill in this form.</div>
+                  <button type="submit" class="btn btn-primary  btn-block mt-4">Sign Up</button>   
               </form>
-              <a class="btn btn-primary  btn-block mt-4">Sign Up</a>
             </div>
           </div>
         </div>

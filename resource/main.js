@@ -16,6 +16,7 @@ $(function()
     loop: true
   })
 
+  // Hiệu ứng chuyển màu thanh Menu
   function scrollFunction() {
     if (
       document.body.scrollTop > 20 ||
@@ -23,7 +24,6 @@ $(function()
     ) {
       toTop.style.display = "block";
       menu.style.background = "white";
-  
     } else {
       toTop.style.display = "none";
       menu.style.background = "none";
@@ -75,6 +75,8 @@ $(function()
     $("#premium .card:first").animate({top: '+=15px'});
   })
 
+
+   // Đóng mở Side Menu
   $('.navbar-responsive').click(function() {
     $('.navbar-side').css('display', 'block')
   });
@@ -88,6 +90,8 @@ $(function()
   });
 })
 
+
+// Hiệu ứng chuyển trang sản phẩm
 function toPage1() {
   pg1.style.display = "flex";
   pg2.style.display = "none";
@@ -106,6 +110,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+// Kiểm tra tài khoản đăng nhập
 function check() {
   let name = document.getElementById("user").value;
   let pwd = document.getElementById("password").value;

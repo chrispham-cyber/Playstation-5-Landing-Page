@@ -2,18 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 
-#follow img:hover, #game img:hover {
-  height: 90%;
-}
-
-#game img, #follow img{
-  height: 80%;
-}
-
 ::-webkit-scrollbar {
   display: none;
 };
 
+/* Menu Drop-down */
 .dropdown-item:first-child{
   margin-top: -10px;
 }
@@ -25,6 +18,15 @@ html {
 .dropdown-item:hover{
   font-weight: bolder;
   color: #fff;
+}
+
+/* Game va Follow */
+#follow img:hover, #game img:hover {
+  transform: scale(1.1);
+}
+
+#game img, #follow img{
+  height: 90%;
 }
 
 #fb:hover{
@@ -43,6 +45,15 @@ html {
   background-color: #1da1f2;
 }
 
+.btn, #follow .img{
+  box-shadow: 3px 4px 5px rgba(150, 150, 150, 0.5);
+}
+
+#game .badge{
+  opacity: 0.8;
+}
+
+/* Nút quay về đầu trang */
 #toTopBtn {
   display: none;
   position: fixed;
@@ -57,14 +68,6 @@ html {
   color: rgb(36, 111, 209);
 }
 
-.btn, #follow .img{
-  box-shadow: 3px 4px 5px rgba(150, 150, 150, 0.5);
-}
-
-#game .badge{
-  opacity: 0.8;
-}
-
 footer{
   background-image: url("img/footer.jpg");
   background-size: cover;
@@ -73,9 +76,10 @@ footer{
 }
 
 footer #footer{
-  background-color: rgba(6, 6, 6, 0.8);
+  background-color: rgba(6, 6, 6, 0.7);
 }
 
+/* Form đăng ký */
 #premium{
   background-image: url("img/premium.jpg");
   background-size: cover;
@@ -103,6 +107,7 @@ footer #footer{
   margin-bottom: -5px;
 }
 
+/* Form đăng nhập */
 .acc {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -118,10 +123,7 @@ footer #footer{
   color: red;
 }
 
-.card-img-overlay h1{
-  text-shadow: 7px 5px 7px black;
-}
-
+/* Side Menu */
 .navbar-side {
     display: none;
     position: fixed;
@@ -139,4 +141,10 @@ footer #footer{
 .navbar-body a:hover{
   color: red;
   text-decoration: none;
+}
+
+
+/* Slider */
+.card-img-overlay h1{
+  text-shadow: 7px 5px 7px black;
 }
