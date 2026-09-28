@@ -25,18 +25,19 @@
 
 <body class="text-center" data-aos="zoom-in">
     <div style="max-width: 300px" class="mx-auto w-100">
-        <img style="width: 170px; padding-top: 130px" src="resource/img/login.png">
+        <img style="width: 170px; padding-top: 130px" src="resource/img/login.png" alt="PlayStation">
         <div class="text-center">
         <h2 class="font-weight-light">Sign in your account</h2>
 
         <form action="home.html" class="pt-4 was-validated" onsubmit="return check()">
             <div class="form-group">
-              <input type="email" class="form-control py-4 acc" placeholder="Enter your email" id="user" required>
-              <input type="password" class="form-control py-4 pwd" placeholder="Enter your password" id="password" required>
+              <input type="email" class="form-control py-4 acc" placeholder="Enter your email" id="user" aria-label="Email" required>
+              <input type="password" class="form-control py-4 pwd" placeholder="Enter your password" id="password" aria-label="Password" required>
               <div class="invalid-feedback" >Please fill in this form.</div>
 
               <div class="alert alert-danger mt-4" id="noti" style="display: none;">
-                <img class="img img-fluid text-danger mr-3" src="resource/img/warning.png" width="30px">
+                <img class="img img-fluid text-danger mr-3" src="resource/img/warning.png" width="30px" alt="">
+
                 Wrong Email or Password!
               </div>
             </div>

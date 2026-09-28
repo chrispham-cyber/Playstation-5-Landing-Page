@@ -6,7 +6,7 @@
 
   <!-- Hình thumbnail -->
   <meta name='og:image' content="https://www.gizchina.com/wp-content/uploads/images/2021/02/PS5-ssd.jpg">
- 
+
   <link rel="icon" type="image/png"
     href="https://gmedia.playstation.com/is/image/SIEPDC/ps-logo-favicon?$icon-32-32--t$" sizes="32x32">
 
@@ -32,14 +32,30 @@
   <script src="resource/main.js"></script>
 
   <title>PlayStation®5</title>
+
+  <style>
+    /* Accessibility helpers */
+    .visually-hidden{
+      position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+    }
+    .skip-link{
+      position:absolute;left:8px;top:-48px;z-index:2000;background:#003791;color:#fff;
+      padding:10px 16px;border-radius:0 0 8px 8px;text-decoration:none;transition:top .15s ease;
+    }
+    .skip-link:focus{top:0}
+    a:focus-visible,button:focus-visible{outline:3px solid #ffd000;outline-offset:2px}
+  </style>
 </head>
 
 <body>
+  <a href="#about" class="skip-link">Skip to main content</a>
+
   <!-- MENU -->
   <header>
-    <nav class="navbar navbar-expand fixed-top" id="menu">
-      <a href="#home" class="navbar-brand ml-5">
-        <img src="resource/img/ps5-logo.png" style="width: 200px" />
+    <nav class="navbar navbar-expand fixed-top" id="menu" aria-label="Main navigation">
+      <a href="#home" class="navbar-brand ml-5" aria-label="PlayStation 5 — home">
+        <img src="resource/img/ps5-logo.png" style="width: 200px" alt="PlayStation 5" />
       </a>
 
       <ul class="navbar-nav mt-2 ml-sm-auto pr-5">
@@ -59,47 +75,49 @@
         </li>
 
         <li class="nav-item navbar-responsive" style="display: none;">
-          <i class="fas fa-bars h4"></i>
+          <button type="button" aria-label="Open menu" style="background:none;border:0;padding:0;color:inherit;cursor:pointer">
+            <i class="fas fa-bars h4" aria-hidden="true"></i>
+          </button>
         </li>
       </ul>
 
       <!-- Side Menu -->
       <div class="navbar-side" data-aos="slide-right" data-aos-easing="ease-out">
         <div class="navbar-heading pt-4">
-          <a href="#home">
-            <img src="resource/img/ps5-logo.png" style="width: 170px" />
-          </a>    
+          <a href="#home" aria-label="PlayStation 5 — home">
+            <img src="resource/img/ps5-logo.png" style="width: 170px" alt="PlayStation 5" />
+          </a>
         </div>
 
         <div class="navbar-body pt-3">
             <ul class="navbar-item nav-link h5" type = "none">
                 <li class="navbar-item">
-                  <a href="#home">Home</a> 
+                  <a href="#home">Home</a>
                 </li>
 
                 <li class="navbar-item pt-2">
-                    <a href="#about">About</a> 
+                    <a href="#about">About</a>
                 </li>
 
                 <li class="navbar-item pt-2">
-                  <a href="#game">Gaming</a> 
+                  <a href="#game">Gaming</a>
                 </li>
 
                 <li class="navbar-item pt-2">
-                  <a href="#device">Devices</a> 
+                  <a href="#device">Devices</a>
                 </li>
 
                 <li class="navbar-item pt-2">
-                  <a href="#premium">Premium</a> 
+                  <a href="#premium">Premium</a>
                 </li>
 
                 <li class="navbar-item pt-2">
-                  <a href="#follow">Follow</a> 
+                  <a href="#follow">Follow</a>
                 </li>
             </ul>
 
-            <button class="btn btn-primary d-block mx-auto w-50 pt-2">
-              <i class="fas fa-times navbar-heading-out text-white"></i>
+            <button class="btn btn-primary d-block mx-auto w-50 pt-2" aria-label="Close menu">
+              <i class="fas fa-times navbar-heading-out text-white" aria-hidden="true"></i>
             </button>
         </div>
     </div>
@@ -107,20 +125,20 @@
   </header>
 
   <!-- SLIDE -->
-  <section>
+  <section aria-label="Featured games">
     <div id="home" class="carousel slide" data-ride="carousel" data-interval="1500">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row mb-n5">
             <div class="card bg-dark text-white" data-aos="zoom-in">
-              <img class="card-img" src="resource/img/jf.jpg" id="banner">
+              <img class="card-img" src="resource/img/jf.jpg" id="banner" alt="Jump Force key art with manga heroes" />
               <div class="card-img-overlay">
                 <div class="pl-5 pt-5 ml-5 mt-5" data-aos="fade-down" data-aos-delay="500">
-                  <img width="35%" src="resource/img/jfLogo.png">
+                  <img width="35%" src="resource/img/jfLogo.png" alt="Jump Force logo" />
                   <div class="slide-title">
-                      <h1 class="mt-3 font-weight-bolder">
-                        <i>Gomu Gomu No - Bazooka</i>                    
-                      </h1>
+                      <h2 class="h1 mt-3 font-weight-bolder">
+                        <i>Gomu Gomu No - Bazooka</i>
+                      </h2>
                       <p class="py-4 h5">
                         The most famous Manga heroes are thrown into a fight <br>
                         The Jump Force will bear the fate of the entire human kind
@@ -135,19 +153,19 @@
         <div class="carousel-item">
           <div class="row mb-n5">
             <div class="card bg-dark text-white" data-aos="zoom-in">
-              <img class="card-img" src="resource/img/yasuo.png" id="banner">
+              <img class="card-img" src="resource/img/yasuo.png" id="banner" alt="League of Legends champion Yasuo" />
               <div class="card-img-overlay">
                 <div class="pl-5 pt-5 ml-5 mt-5">
-                  <img width="35%" src="resource/img/lolLogo.png">
+                  <img width="35%" src="resource/img/lolLogo.png" alt="League of Legends logo" />
                   <div class="slide-title">
-                      <h1 class="mt-3 font-weight-bold">
-                        <i>Death Is Like The Wind</i>                    
-                      </h1>
+                      <h2 class="h1 mt-3 font-weight-bold">
+                        <i>Death Is Like The Wind</i>
+                      </h2>
                       <p class="py-4 h5">
                         Ranking with your mates will make your day <br>
                         More than 150 champions are waiting for you
                       </p>
-                  </div>                  
+                  </div>
                 </div>
               </div>
             </div>
@@ -157,31 +175,31 @@
         <div class="carousel-item">
           <div class="row mb-n5">
             <div class="card bg-dark text-white" data-aos="zoom-in">
-              <img class="card-img" src="resource/img/mk.jpg" id="banner">
+              <img class="card-img" src="resource/img/mk.jpg" id="banner" alt="Mortal Kombat X key art" />
               <div class="card-img-overlay">
                 <div class="pl-5 pt-5 ml-5 mt-5">
-                  <img width="35%" src="resource/img/mkLogo.png">
+                  <img width="35%" src="resource/img/mkLogo.png" alt="Mortal Kombat logo" />
                   <div class="slide-title">
-                      <h1 class="mt-3 font-weight-bold">
-                        <i>Vengeance Will Be Mine</i>                   
-                      </h1>
+                      <h2 class="h1 mt-3 font-weight-bold">
+                        <i>Vengeance Will Be Mine</i>
+                      </h2>
                       <p class="py-4 h5">
                         Mortal Kombat X combines unparalleled with all new gameplay<br>
                         Multiple variations of each character and fighting style
                       </p>
-                  </div>               
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <a class="carousel-control-prev ml-n5" href="#home" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
+        <a class="carousel-control-prev ml-n5" href="#home" data-slide="prev" aria-label="Previous slide">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </a>
 
-        <a class="carousel-control-next" href="#home" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
+        <a class="carousel-control-next" href="#home" data-slide="next" aria-label="Next slide">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
       </div>
     </div>
@@ -191,7 +209,7 @@
   <section>
     <div class="container-fluid pt-5 text-center" id="about">
       <div data-aos="zoom-in" class="pt-4">
-        <p class="h6 text-uppercase text-primary mb-n1" style="letter-spacing: 3px; font-weight: 600">
+        <p class="h6 text-uppercase mb-n1" style="letter-spacing: 3px; font-weight: 600; color: #0056b3">
           Play Has No Limits
         </p>
         <h1 class="font-weight-light">Introducing PlayStation 5</h1>
@@ -211,11 +229,11 @@
             <button class="btn btn-outline-primary rounded-pill font-weight-bolder">
               Learn More
             </button>
-          </a>        
+          </a>
         </div>
 
         <div class="col-sm-7" data-aos="slide-right">
-          <img class="img img-fluid" src="resource/img/ps5-about.png" />
+          <img class="img img-fluid" src="resource/img/ps5-about.png" alt="PlayStation 5 console standing upright beside a DualSense controller" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
@@ -224,16 +242,16 @@
   <!-- GAMING -->
   <section>
     <div class="container-fluid pt-4" id="game" style="background-color: #1f1f1f">
-      <p class="h1 pt-5 mb-n5 font-weight-normal text-light text-center" data-aos="flip-left">
+      <h2 class="h1 pt-5 mb-n5 font-weight-normal text-light text-center" data-aos="flip-left">
         More Than
         <span class="counter-count">10000</span>
         Games
-      </p>
+      </h2>
 
       <div class="row p-5" data-aos="zoom-in">
         <div class="col-sm-3 mt-5">
-          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
-            <img class="img img-fluid" src="resource/img/g1.jpg" />
+          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank" rel="noopener" aria-label="Watch trailer — new game">
+            <img class="img img-fluid" src="resource/img/g1.jpg" alt="PlayStation 5 game cover" loading="lazy" decoding="async" />
             <div class="card-img-overlay pt-2 w-25 h-25">
               <span class="badge badge-danger px-2">New</span>
             </div>
@@ -241,8 +259,8 @@
         </div>
 
         <div class="col-sm-3 mt-5">
-          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
-            <img class="img img-fluid" src="resource/img/g2.jpg" />
+          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank" rel="noopener" aria-label="Watch trailer — hot game">
+            <img class="img img-fluid" src="resource/img/g2.jpg" alt="PlayStation 5 game cover" loading="lazy" decoding="async" />
             <div class="card-img-overlay pt-2 w-25 h-25">
               <span class="badge badge-danger px-2">Hot</span>
             </div>
@@ -250,8 +268,8 @@
         </div>
 
         <div class="col-sm-3 mt-5">
-          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
-            <img class="img img-fluid" src="resource/img/g3.jpg" />
+          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank" rel="noopener" aria-label="Watch trailer — free game">
+            <img class="img img-fluid" src="resource/img/g3.jpg" alt="PlayStation 5 game cover" loading="lazy" decoding="async" />
             <div class="card-img-overlay pt-2 w-25 h-25">
               <span class="badge badge-danger px-2">Free</span>
             </div>
@@ -259,8 +277,8 @@
         </div>
 
         <div class="col-sm-3 mt-5">
-          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
-            <img class="img img-fluid" src="resource/img/g4.jpg" />
+          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank" rel="noopener" aria-label="Watch trailer — new game">
+            <img class="img img-fluid" src="resource/img/g4.jpg" alt="PlayStation 5 game cover" loading="lazy" decoding="async" />
             <div class="card-img-overlay pt-2 w-25 h-25">
               <span class="badge badge-danger px-2">New</span>
             </div>
@@ -268,8 +286,8 @@
         </div>
 
         <div class="col-sm-3 mt-5">
-          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
-            <img class="img img-fluid" src="resource/img/g5.jpg" />
+          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank" rel="noopener" aria-label="Watch trailer — hot game">
+            <img class="img img-fluid" src="resource/img/g5.jpg" alt="PlayStation 5 game cover" loading="lazy" decoding="async" />
             <div class="card-img-overlay pt-2 w-25 h-25">
               <span class="badge badge-danger px-2">Hot</span>
             </div>
@@ -277,8 +295,8 @@
         </div>
 
         <div class="col-sm-3 mt-5">
-          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
-            <img class="img img-fluid" src="resource/img/g6.jpg" />
+          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank" rel="noopener" aria-label="Watch trailer — new game">
+            <img class="img img-fluid" src="resource/img/g6.jpg" alt="PlayStation 5 game cover" loading="lazy" decoding="async" />
             <div class="card-img-overlay pt-2 w-25 h-25">
               <span class="badge badge-danger px-2">New</span>
             </div>
@@ -286,8 +304,8 @@
         </div>
 
         <div class="col-sm-3 mt-5">
-          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
-            <img class="img img-fluid" src="resource/img/g7.png" />
+          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank" rel="noopener" aria-label="Watch trailer — trending game">
+            <img class="img img-fluid" src="resource/img/g7.png" alt="PlayStation 5 game cover" loading="lazy" decoding="async" />
             <div class="card-img-overlay pt-2 w-25 h-25">
               <span class="badge badge-danger px-2">Trend</span>
             </div>
@@ -295,8 +313,8 @@
         </div>
 
         <div class="col-sm-3 mt-5">
-          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank">
-            <img class="img img-fluid" src="resource/img/g8.jpg" />
+          <a href="https://www.youtube.com/watch?v=RkC0l4iekYo" target="_blank" rel="noopener" aria-label="Watch trailer — game on sale">
+            <img class="img img-fluid" src="resource/img/g8.jpg" alt="PlayStation 5 game cover" loading="lazy" decoding="async" />
             <div class="card-img-overlay pt-2 w-25 h-25">
               <span class="badge badge-danger px-2">Sale 30%</span>
             </div>
@@ -310,7 +328,7 @@
   <section>
     <div class="container-fluid pt-5 text-center" id="device">
       <div data-aos="zoom-in" class="pt-4">
-        <h1 class="font-weight-light">PlayStation®5 Devices</h1>
+        <h2 class="h1 font-weight-light">PlayStation®5 Devices</h2>
         <p class="text-muted pt-2 h5">
           Incredible games, non-stop entertainment. There's never been a better
           time to enjoy PS5.
@@ -320,40 +338,40 @@
       <!-- Trang 1 -->
       <div class="row justify-content-center" id="page1">
         <div class="col-sm-5" data-aos="slide-left">
-          <img class="img img-fluid h-75 w-75" src="resource/img/d1.jpg"/>
+          <img class="img img-fluid h-75 w-75" src="resource/img/d1.jpg" alt="PlayStation 5 HD Camera" loading="lazy" decoding="async" />
           <h3>HD Camera</h3>
           <a href="https://www.playstation.com/en-vn/accessories/hd-camera/">
             <button class="btn btn-outline-primary rounded-pill font-weight-bolder mt-4">
               Learn More
             </button>
-          </a>     
+          </a>
         </div>
 
         <div class="col-sm-5" data-aos="slide-right">
-          <img class="img img-fluid h-75 w-75" src="resource/img/d2.png"/>
+          <img class="img img-fluid h-75 w-75" src="resource/img/d2.png" alt="PlayStation 5 Media Remote" loading="lazy" decoding="async" />
           <h3>Media remote</h3>
           <a href="https://www.playstation.com/en-vn/accessories/media-remote/">
             <button class="btn btn-outline-primary rounded-pill font-weight-bolder mt-4">
               Learn More
             </button>
-          </a>  
+          </a>
         </div>
       </div>
 
       <!-- Trang 2 -->
       <div class="row justify-content-center" id="page2" style="display: none;">
         <div class="col-sm-5" data-aos="slide-left">
-          <img class="img img-fluid h-75 w-75" src="resource/img/d3.png"/>
+          <img class="img img-fluid h-75 w-75" src="resource/img/d3.png" alt="PlayStation 5 DualSense wireless controller" loading="lazy" decoding="async" />
           <h3>PS5 Console</h3>
           <a href="https://www.playstation.com/en-vn/accessories/dualsense-wireless-controller/">
             <button class="btn btn-outline-primary rounded-pill font-weight-bolder mt-4">
               Learn More
             </button>
-          </a>  
+          </a>
         </div>
 
         <div class="col-sm-5" data-aos="slide-right">
-          <img class="img img-fluid h-75 w-75" src="resource/img/d4.png"/>
+          <img class="img img-fluid h-75 w-75" src="resource/img/d4.png" alt="PlayStation 5 Pulse 3D wireless headset" loading="lazy" decoding="async" />
           <h3>Headphone</h3>
           <a href="https://www.playstation.com/en-vn/accessories/pulse-3d-wireless-headset/">
             <button class="btn btn-outline-primary rounded-pill font-weight-bolder mt-4">
@@ -366,10 +384,10 @@
       <!-- Chuyển trang -->
       <ul class="pagination justify-content-center">
         <li class="page-item active" id="pg-btn1">
-          <button class="page-link" onclick="toPage1()">1</button>
+          <button class="page-link" onclick="toPage1()" aria-label="Devices page 1">1</button>
         </li>
         <li class="page-item" id="pg-btn2">
-          <button class="page-link" onclick="toPage2()">2</button>
+          <button class="page-link" onclick="toPage2()" aria-label="Devices page 2">2</button>
         </li>
       </ul>
     </div>
@@ -381,31 +399,31 @@
       <div class="row p-5">
         <div class="col-sm-6 d-flex justify-content-center">
           <div class="card" style="width: 350px; border: none;">
-            <img src="resource/img/form.jpg" class="card-img-top">
+            <img src="resource/img/form.jpg" class="card-img-top" alt="" loading="lazy" decoding="async">
             <div class="card-body mb-3">
-              <form class="was-validated">             
-                  <input type="text" class="form-control" placeholder="User Name" required> 
-                  <input type="email" class="form-control" placeholder="Email" required> 
-                  <input type="password" class="form-control" placeholder="Password" required> 
+              <form class="was-validated" aria-label="Premium sign up">
+                  <input type="text" class="form-control" placeholder="User Name" aria-label="User name" required>
+                  <input type="email" class="form-control" placeholder="Email" aria-label="Email" required>
+                  <input type="password" class="form-control" placeholder="Password" aria-label="Password" required>
                   <div class="invalid-feedback" >Please fill in this form.</div>
-                  <button type="submit" class="btn btn-primary  btn-block mt-4">Sign Up</button>   
+                  <button type="submit" class="btn btn-primary  btn-block mt-4">Sign Up</button>
               </form>
             </div>
           </div>
         </div>
 
         <div class="col-sm-6 pt-5">
-          <h3 style="color: rgb(252, 222, 55)">The Benefits Of Becoming 
+          <h2 class="h3" style="color: rgb(252, 222, 55)">The Benefits Of Becoming
             <span class="typing"></span> Player
-          </h3>
-          
+          </h2>
+
           <p style="font-size: 20px; width: 80%; text-align: justify; color: rgb(255, 255, 255); font-weight: lighter;">Game creators can build their PS5 games so you can jump straight into specific missions, modes, quests. <br> Sign up now for the treasures below: </p>
 
           <div id="accordion" class="pt-5" style="width: 80%;">
             <div class="card">
               <div class="card-header">
                 <a class="card-link font-weight-bold d-block" data-toggle="collapse" href="#collapseOne">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down mr-2" viewBox="0 0 16 16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down mr-2" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                   </svg>
                   Trial
@@ -414,10 +432,10 @@
 
               <div id="collapseOne" class="collapse" data-parent="#accordion">
                 <div class="card-body">
-                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2">
-                  Playing 1 Hour/Day<br> 
+                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2" alt="Included">
+                  Playing 1 Hour/Day<br>
 
-                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2">
+                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2" alt="Included">
                   3 Games A Day
                 </div>
               </div>
@@ -426,7 +444,7 @@
             <div class="card">
               <div class="card-header">
                 <a class="collapsed card-link font-weight-bold d-block" data-toggle="collapse" href="#collapseTwo">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down mr-2" viewBox="0 0 16 16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down mr-2" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                   </svg>
                   Paid
@@ -435,10 +453,10 @@
 
               <div id="collapseTwo" class="collapse" data-parent="#accordion">
                 <div class="card-body">
-                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2">
-                  Unlimited Games <br> 
+                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2" alt="Included">
+                  Unlimited Games <br>
 
-                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2">
+                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2" alt="Included">
                   Unlimited Time Playing
                 </div>
               </div>
@@ -447,7 +465,7 @@
             <div class="card">
               <div class="card-header">
                 <a class="collapsed card-link font-weight-bold d-block" data-toggle="collapse" href="#collapseThree">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down mr-2" viewBox="0 0 16 16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down mr-2" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                   </svg>
                   VIP
@@ -456,11 +474,11 @@
 
               <div id="collapseThree" class="collapse" data-parent="#accordion">
                 <div class="card-body">
-                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2">
-                  Get Any Games You Want<br> 
+                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2" alt="Included">
+                  Get Any Games You Want<br>
 
-                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2">
-                  Free All Character's Skins 
+                  <img src="https://media.flaticon.com/dist/min/img/pricing/icon-tick.svg" width="20" height="20" class="mx-2" alt="Included">
+                  Free All Character's Skins
                 </div>
               </div>
             </div>
@@ -468,36 +486,36 @@
         </div>
         </div>
       </div>
-    </div>  
+    </div>
   </section>
 
   <!-- FOLLOW -->
   <section>
     <div class="container text-center pt-5" id="follow">
-      <h1 class="font-weight-light pb-2" data-aos="zoom-in">Follow us on social media</h1>
+      <h2 class="h1 font-weight-light pb-2" data-aos="zoom-in">Follow us on social media</h2>
 
       <div class="row justify-content-center py-3">
         <div class="col-sm-2" data-aos="flip-right" data-aos-easing="ease-out">
-          <a href="https://www.facebook.com/NataTee22" target="_blank">
-            <img class="img img-fluid rounded-circle" src="resource/img/s1.jpg" />
+          <a href="https://www.facebook.com/NataTee22" target="_blank" rel="noopener" aria-label="Follow PlayStation on Facebook">
+            <img class="img img-fluid rounded-circle" src="resource/img/s1.jpg" alt="Facebook" loading="lazy" decoding="async" />
           </a>
         </div>
 
         <div class="col-sm-2" data-aos="flip-right" data-aos-delay="300" data-aos-easing="ease-out">
-          <a href="https://www.youtube.com/user/PlayStation" target="_blank">
-            <img class="img img-fluid rounded-circle" src="resource/img/s2.png" />
+          <a href="https://www.youtube.com/user/PlayStation" target="_blank" rel="noopener" aria-label="Follow PlayStation on YouTube">
+            <img class="img img-fluid rounded-circle" src="resource/img/s2.png" alt="YouTube" loading="lazy" decoding="async" />
           </a>
         </div>
 
         <div class="col-sm-2" data-aos="flip-right" data-aos-delay="600" data-aos-easing="ease-out">
-          <a href="https://www.instagram.com/playstation/" target="_blank">
-            <img class="img img-fluid rounded-circle" src="resource/img/s3.jpg" />
+          <a href="https://www.instagram.com/playstation/" target="_blank" rel="noopener" aria-label="Follow PlayStation on Instagram">
+            <img class="img img-fluid rounded-circle" src="resource/img/s3.jpg" alt="Instagram" loading="lazy" decoding="async" />
           </a>
         </div>
 
         <div class="col-sm-2" data-aos="flip-right" data-aos-delay="900" data-aos-easing="ease-out">
-          <a href="https://twitter.com/PlayStation" target="_blank">
-            <img class="img img-fluid rounded-circle" src="resource/img/s4.jpg" />
+          <a href="https://twitter.com/PlayStation" target="_blank" rel="noopener" aria-label="Follow PlayStation on Twitter">
+            <img class="img img-fluid rounded-circle" src="resource/img/s4.jpg" alt="Twitter" loading="lazy" decoding="async" />
           </a>
         </div>
       </div>
@@ -525,22 +543,21 @@
           <p class="h5 pb-2 text-uppercase font-weight-bold">Information</p>
           <p>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person"
-              viewBox="0 0 16 16">
+              viewBox="0 0 16 16" aria-hidden="true" focusable="false">
               <path
                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
             </svg>
             Phạm Hoàng Nhật Thanh <br>
-            
+
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-award"
-              viewBox="0 0 16 16">
+              viewBox="0 0 16 16" aria-hidden="true" focusable="false">
               <path
                 d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z" />
-              <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
             </svg>
             2051012108 <br>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-building"
-              viewBox="0 0 16 16">
+              viewBox="0 0 16 16" aria-hidden="true" focusable="false">
               <path fill-rule="evenodd"
                 d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z" />
               <path
@@ -556,6 +573,7 @@
             Address Open University
           </p>
           <iframe
+            title="Google Map — Ho Chi Minh City Open University"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.925119729195!2d106.67491891486492!3d10.817042392293946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e1f241211f%3A0xc9ef195798144b1f!2zxJDhuqFpIGjhu41jIE3hu58gVFAuSENN!5e0!3m2!1svi!2s!4v1630694990812!5m2!1svi!2s"
             style="border: 0px; width: 390px" allowfullscreen="" loading="lazy"></iframe>
         </div>
@@ -564,11 +582,13 @@
   </footer>
 
   <!-- Nút quay về đầu trang -->
-  <svg onclick="topFunction()" id="toTopBtn" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
-    fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 17 17">
-    <path fill-rule="evenodd"
-      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
-  </svg>
+  <button type="button" onclick="topFunction()" id="toTopBtn" aria-label="Back to top" style="background:none;border:0;padding:0">
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+      fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 17 17" aria-hidden="true" focusable="false">
+      <path fill-rule="evenodd"
+        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+    </svg>
+  </button>
 </body>
 
 <script>
